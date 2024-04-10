@@ -1,6 +1,10 @@
 def encoder(message):
-    crypt = []
+    crypt = ""
     try:
         for num in message:
-            crypt.append(message+3)
-        return crypt
+            crypt = crypt + str((int(num)+3))
+        return int(crypt)
+    except:
+        print("Error, please enter number string only")
+
+#print(encoder("0055511"))
